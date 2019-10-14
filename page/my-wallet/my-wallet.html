@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>我的钱包</title>
+    <link rel="stylesheet" href="../../libs/css/base.css" />
+    <script type="text/javascript" src="../../libs/js/rem.js"></script>
+
+    <style>
+      .cell-item {
+        height: 1.12rem;
+        line-height: 1.12rem;
+        font-size: 0.35rem;
+        color: #fff;
+        margin-left: 0.3rem;
+        border-bottom: 0.005rem solid #695f6a;
+        position: relative;
+      }
+      .cell-item img {
+        position: absolute;
+        top: 0.45rem;
+        right: 0.26rem;
+        width: 0.13rem;
+        height: 0.23rem;
+      }
+      .cell-item .amount {
+        position: absolute;
+        top: 0;
+        right: 0.6rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wallet-container">
+      <a href="../chargeMoney/charge.html">
+        <div class="cell-item">
+          <p>钻石（充值）</p>
+          <p class="amount">1000</p>
+          <img src="../../assets/点击.png" />
+        </div>
+      </a>
+      <a href="#">
+        <div class="cell-item">
+          <p>金币</p>
+          <p class="amount">1000</p>
+        </div>
+      </a>
+      <a href="./consume-record.html">
+        <div class="cell-item">
+          <p>消费明细</p>
+          <img src="../../assets/点击.png" />
+        </div>
+      </a>
+      <a href="./income-details.html">
+        <div class="cell-item">
+          <p>
+            我的收益<span style="font-size: 0.28rem"
+              >（通过邀请获得以及认证成为主持后获得）</span
+            >
+          </p>
+          <img src="../../assets/点击.png" />
+        </div>
+      </a>
+      <a href="../chargeMoney/luckRecord.html">
+        <div class="cell-item">
+          <p>抽奖记录</p>
+          <img src="../../assets/点击.png" />
+        </div>
+      </a>
+      
+    </div>
+  </body>
+</html>

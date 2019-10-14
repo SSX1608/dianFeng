@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>充值</title>
+    <link rel="stylesheet" href="../../libs/css/base.css" />
+    <script type="text/javascript" src="../../libs/js/rem.js"></script>
+    <script type="text/javascript" src="../../libs/js/jquery.min.js"></script>
+    <style>
+      .chargeList {
+        padding: 0.34rem 0.2rem 0;
+      }
+      .chargeList .perList {
+        position: relative;
+        height: 1.21rem;
+        border-radius: 0.13rem;
+        margin-bottom: 0.2rem;
+        line-height: 1.21rem;
+        background: #fff url('../../assets/chargeMny/chargeNo.png') no-repeat;
+        background-size: 100% 100%;
+      }
+      .chargeList .checkedItem {
+        background: #fff url('../../assets/chargeMny/chargeCheck.png') no-repeat;
+        background-size: 100% 100%;
+      }
+      .chargeList .perList .iconImgs {
+        position: relative;
+        top: -3px;
+        display: inline-block;
+        width: 0.582rem;
+        vertical-align: middle;
+        margin-right: 0.2rem;
+        margin-left: 0.35rem;
+      }
+      .chargeList .perList .nutsNum {
+        font-family: PingFangSC-Medium;
+        font-size: 0.32rem;
+        color: #4b4b4b;
+        letter-spacing: 0;
+        text-align: left;
+      }
+      .chargeList .perList .inviteCode {
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        width: 1.74rem;
+        font-family: PingFangSC-Regular;
+        font-size: 0.4rem;
+        color: #de2512;
+        letter-spacing: 0;
+        text-align: center;
+      }
+      .chargeBtn {
+        position: fixed;
+        bottom: 0;
+        height: 1rem;
+        width: 100%;
+        background-image: linear-gradient(239deg, #b83af3 0%, #6950fb 100%);
+        border-radius: 0.08rem 0.08rem 0 0;
+        text-align: center;
+        line-height: 1rem;
+        font-family: PingFangSC-Medium;
+        font-size: 0.3rem;
+        color: #ffffff;
+        letter-spacing: 0.64px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chargeList">
+      <div class="perList checkedItem">
+        <img
+          class="iconImgs"
+          src="../../assets/chargeMny/nutsIcon.png"
+          alt=""
+        />
+        <span class="nutsNum">100钻</span>
+        <p class="inviteCode">¥6</p>
+      </div>
+      <div class="perList">
+        <img
+          class="iconImgs"
+          src="../../assets/chargeMny/nutsIcon.png"
+          alt=""
+        />
+        <span class="nutsNum">500钻</span>
+        <p class="inviteCode">¥10</p>
+      </div>
+      <div class="perList">
+        <img
+          class="iconImgs"
+          src="../../assets/chargeMny/nutsIcon.png"
+          alt=""
+        />
+        <span class="nutsNum">600钻</span>
+        <p class="inviteCode">¥15</p>
+      </div>
+      <div class="perList">
+        <img
+          class="iconImgs"
+          src="../../assets/chargeMny/nutsIcon.png"
+          alt=""
+        />
+        <span class="nutsNum">800钻</span>
+        <p class="inviteCode">¥20</p>
+      </div>
+      <div class="perList">
+        <img
+          class="iconImgs"
+          src="../../assets/chargeMny/nutsIcon.png"
+          alt=""
+        />
+        <span class="nutsNum">1000钻</span>
+        <p class="inviteCode">¥30</p>
+      </div>
+      <div class="perList">
+        <img
+          class="iconImgs"
+          src="../../assets/chargeMny/nutsIcon.png"
+          alt=""
+        />
+        <span class="nutsNum">1200钻</span>
+        <p class="inviteCode">¥35</p>
+      </div>
+    </div>
+    <div class="chargeBtn">确定充值</div>
+  </body>
+
+  <script>
+    $(function() {
+      $('.perList').on('click', function() {
+        if ($(this).hasClass('checkedItem')) {
+          return false
+        } else {
+          $(this)
+            .siblings()
+            .removeClass('checkedItem')
+            .end()
+            .addClass('checkedItem')
+          var tabName = $(this).text()
+          return alert('切换至：' + tabName)
+        }
+      })
+      $('.chargeBtn').on('click', function() {
+        alert('点击确定充值')
+      })
+    })
+  </script>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>修改资料</title>
+    <link rel="stylesheet" href="../../libs/css/base.css" />
+    <link rel="stylesheet" href="../../libs/mobileSelect/mobileSelect.css" />
+    <script type="text/javascript" src="../../libs/js/rem.js"></script>
+    <style>
+      html {
+        background: #635069;
+        color: #fff;
+      }
+
+      .box {
+        font-family: 'PingFangSC-Regular';
+        padding-top: 0.2rem;
+        padding-left: 3%;
+        font-size: 0.32rem;
+      }
+
+      .box li {
+        padding: 0.2rem 0;
+        padding-right: 0.2rem;
+        line-height: 0.8rem;
+        overflow: hidden;
+        border-bottom: 1px solid #695f6a;
+      }
+
+      .fl {
+        float: left;
+      }
+
+      .fr {
+        float: right;
+      }
+
+      .photo {
+        width: 1.12rem;
+        height: 1.12rem;
+        border-radius: 50%;
+        vertical-align: bottom;
+        margin-right: 0.2rem;
+      }
+
+      .box .right {
+        vertical-align: middle;
+        transform: scale(0.7);
+      }
+
+      .sca {
+        transform: scale(0.7);
+      }
+
+      .box .text {
+        position: relative;
+        top: 0.2rem;
+      }
+
+      .value {
+        color: #898989;
+        font-size: 0.28rem;
+      }
+
+      .save-btn {
+        display: block;
+        width: 5.5rem;
+        height: 1rem;
+        background: #b83af3;
+        background: linear-gradient(to right, #6950fb, #b83af3);
+        outline: none;
+        border: none;
+        color: #fff;
+        font-size: 0.3rem;
+        margin: 1.2rem auto 0;
+        border-radius: 0.08rem;
+      }
+
+      .box ul li {
+        position: relative;
+      }
+
+      .gotoLink {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .propContain {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 -4px 10px #888;
+        display: none;
+      }
+
+      .propContain .avatar p {
+        font-family: 'PingFangSC-Regular';
+        font-size: 0.32rem;
+        color: #333;
+        padding: 0.2rem 0;
+        padding-right: 0.2rem;
+        line-height: 0.8rem;
+        overflow: hidden;
+        border-bottom: 1px solid #695f6a;
+        text-align: center;
+      }
+
+      .propContain .avatar p:last-child {
+        border: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <ul>
+        <li class="avatarIcon">
+          <p class="fl text">头像</p>
+          <div class="fr">
+            <img src="../../assets/jtw/head.png" alt="" class="photo" />
+            <img src="../../assets/jtw/right.png" alt="" class="sca" />
+          </div>
+        </li>
+        <li>
+          <p class="fl">昵称</p>
+          <div class="fr">
+            <a class="" href="reviseName.html">
+              <span class="value">来卡卡呢啥</span>
+              <img src="../../assets/jtw/right.png" alt="" class="right" />
+            </a>
+          </div>
+        </li>
+        <li>
+          <p class="fl ">ID</p>
+          <div class="fr">
+            <span class="value">92732345</span>
+          </div>
+        </li>
+        <li class="sexIcon">
+          <p class="fl">姓别</p>
+          <div class="fr">
+            <span class="value sex">女</span>
+            <img
+              src="../../assets/jtw/right.png"
+              alt=""
+              class="right"
+              id="sex-btn"
+            />
+          </div>
+        </li>
+        <li class="birthday">
+          <p class="fl ">生日</p>
+          <div class="fr">
+            <span class="value hisdate">1996-09-23</span>
+            <img
+              src="../../assets/jtw/right.png"
+              alt=""
+              class="right"
+              id="date-btn"
+            />
+          </div>
+        </li>
+      </ul>
+      <button class="save-btn">保存</button>
+    </div>
+    <!--选择框-->
+    <div class="propContain">
+      <div class="avatar">
+        <p class="takePic">拍照</p>
+        <p class="getPic">从相册里选择</p>
+        <p class="slideHide">取消</p>
+      </div>
+    </div>
+    <script src="../../libs/js/jquery.min.js"></script>
+    <script src="../../libs/mobileSelect/mobileSelect.min.js"></script>
+  </body>
+</html>
+
+<script>
+  $(function() {
+    $('.avatarIcon').on('click', function() {
+      $('.propContain').slideDown()
+    })
+    $('.slideHide').on('click', function() {
+      $(this)
+        .parent()
+        .parent()
+        .slideUp()
+    })
+    $('.takePic').on('click', function() {
+      alert('调起摄像头')
+      $(this)
+        .parent()
+        .parent()
+        .slideUp()
+    })
+    $('.getPic').on('click', function() {
+      alert('调起相册')
+      $(this)
+        .parent()
+        .parent()
+        .slideUp()
+    })
+
+    var mobileSelect2 = new MobileSelect({
+      trigger: '#sex-btn',
+      title: '',
+      wheels: [
+        {
+          data: ['男', '女']
+        }
+      ],
+      position: [0],
+      callback: function(indexArr, data) {
+        $('.sex').html(data[0])
+      }
+    })
+    var mobileSelect3 = new MobileSelect({
+      trigger: '#date-btn',
+      title: '',
+      wheels: [
+        {
+          data: [
+            { id: '1', value: '1990' },
+            { id: '2', value: '1991' },
+            { id: '3', value: '1992' },
+            { id: '4', value: '1993' },
+            { id: '5', value: '1994' },
+            { id: '6', value: '1995' },
+            { id: '7', value: '1996' },
+            { id: '8', value: '1997' },
+            { id: '9', value: '1998' },
+            { id: '10', value: '1999' },
+            { id: '11', value: '2000' },
+            { id: '12', value: '2001' }
+          ]
+        },
+        {
+          data: [
+            { id: '1', value: '01' },
+            { id: '2', value: '02' },
+            { id: '3', value: '03' },
+            { id: '4', value: '04' },
+            { id: '5', value: '05' },
+            { id: '6', value: '06' },
+            { id: '7', value: '07' },
+            { id: '8', value: '08' },
+            { id: '9', value: '09' },
+            { id: '10', value: '10' },
+            { id: '11', value: '11' },
+            { id: '12', value: '12' }
+          ]
+        },
+        {
+          data: [
+            { id: '1', value: '01' },
+            { id: '2', value: '02' },
+            { id: '3', value: '03' },
+            { id: '4', value: '04' },
+            { id: '5', value: '05' },
+            { id: '6', value: '06' },
+            { id: '7', value: '07' },
+            { id: '8', value: '08' },
+            { id: '9', value: '09' },
+            { id: '10', value: '10' },
+            { id: '11', value: '11' },
+            { id: '12', value: '12' },
+            { id: '13', value: '13' },
+            { id: '14', value: '14' },
+            { id: '15', value: '15' },
+            { id: '16', value: '16' },
+            { id: '17', value: '17' },
+            { id: '18', value: '18' },
+            { id: '19', value: '19' },
+            { id: '20', value: '20' },
+            { id: '21', value: '21' },
+            { id: '22', value: '22' },
+            { id: '23', value: '23' },
+            { id: '24', value: '24' },
+            { id: '25', value: '25' },
+            { id: '26', value: '26' },
+            { id: '27', value: '27' },
+            { id: '28', value: '28' },
+            { id: '29', value: '29' },
+            { id: '30', value: '30' }
+          ]
+        }
+      ],
+      position: [6, 8, 22],
+      callback: function(indexArr, data) {
+        $('.hisdate').html(
+          '' + data[0].value + '-' + data[1].value + '-' + data[2].value
+        )
+      }
+    })
+    $('.save-btn').click(function() {
+      alert('保存成功!')
+    })
+  })
+</script>

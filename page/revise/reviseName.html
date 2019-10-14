@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>修改昵称</title>
+    <link rel="stylesheet" href="../../libs/css/base.css" />
+    <link rel="stylesheet" href="../../libs/css/common.css" />
+    <script type="text/javascript" src="../../libs/js/rem.js"></script>
+    <style>
+      html {
+        background: #635069;
+        color: #fff;
+      }
+
+      .box {
+        font-family: 'PingFangSC-Regular';
+        padding-top: 0.2rem;
+        padding-left: 3%;
+        font-size: 0.32rem;
+        text-align: center;
+      }
+
+      .input {
+        width: 5.5rem;
+        height: 1rem;
+        background: #fff;
+        padding-left: 0.2rem;
+        font-size: 0.3rem;
+        margin-top: 0.7rem;
+        border: none;
+        border-radius: 0.08rem;
+      }
+      .save-btn {
+        display: block;
+        width: 5.5rem;
+        height: 1rem;
+        background: #b83af3;
+        background: linear-gradient(to right, #6950fb, #b83af3);
+        outline: none;
+        border: none;
+        color: #fff;
+        font-size: 0.3rem;
+        margin: 0.4rem auto 0;
+        border-radius: 0.08rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <input type="text" class="input" placeholder="请输入需要修改昵称" />
+      <button class="save-btn">保存</button>
+    </div>
+
+    <script src="../../libs/js/jquery.min.js"></script>
+    <script>
+      $('.save-btn').click(function() {
+        if ($('.input').val()) {
+          alert('保存成功')
+        }
+      })
+    </script>
+  </body>
+</html>

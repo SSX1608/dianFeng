@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>消费记录</title>
+    <link rel="stylesheet" href="../../libs/css/base.css" />
+    <link rel="stylesheet" href="../../libs/css/common.css" />
+    <script type="text/javascript" src="../../libs/js/rem.js"></script>
+    <script type="text/javascript" src="../../libs/js/jquery.min.js"></script>
+
+    <style>
+      .tabs {
+        height: 0.8rem;
+        padding-top: 0.2rem;
+        border-bottom: 0.005rem solid #695f6a;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-around;
+      }
+      .tabs .tab {
+        height: 0.8rem;
+        line-height: 0.8rem;
+        box-sizing: border-box;
+        font-size: 0.35rem;
+        color: #bfbfbf;
+      }
+      .tab.active {
+        color: #fff;
+        border-bottom: 0.06rem solid #d01fe0;
+      }
+      .item {
+        font-size: 0.32rem;
+        margin-left: 0.3rem;
+        padding: 0.25rem 0.3rem 0.2rem 0;
+        border-bottom: 0.005rem solid #695f6a;
+      }
+      .item .title {
+        color: #fff;
+      }
+      .item .amount {
+        color: #de2512;
+      }
+      .item .time {
+        font-size: 0.25rem;
+        color: #a5a5a5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="record-container">
+      <div class="tabs">
+        <div class="tab active">消费记录</div>
+        <div class="tab">充值记录</div>
+      </div>
+      <div class="content">
+        <div class="item">
+          <div class="display_flex justify-content_flex-justify">
+            <div class="title">充值金额10元</div>
+            <div class="amount">-100钻石</div>
+          </div>
+          <div class="time">2019.06.30</div>
+        </div>
+        <div class="item">
+          <div class="display_flex justify-content_flex-justify">
+            <div class="title">充值金额10元</div>
+            <div class="amount">-100钻石</div>
+          </div>
+          <div class="time">2019.06.30</div>
+        </div>
+        <div class="item">
+          <div class="display_flex justify-content_flex-justify">
+            <div class="title">充值金额10元</div>
+            <div class="amount">-100钻石</div>
+          </div>
+          <div class="time">2019.06.30</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(function () {
+      $('.tab').on('click', function () {
+        if ($(this).hasClass("active")) {
+          return false;
+        } else {
+          $(this).siblings().removeClass('active').end().addClass('active')
+          var tabName = $(this).text();
+          return alert("切换至："+tabName)
+        }
+      })
+    })
+  </script>
+</html>

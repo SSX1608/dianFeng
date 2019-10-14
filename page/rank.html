@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>榜单</title>
+    <link rel="stylesheet" href="../libs/css/base.css" />
+    <link rel="stylesheet" href="../libs/swiper/swiper.min.css" />
+    <script type="text/javascript" src="../libs/js/rem.js"></script>
+    <style>
+      html {
+        background: #635069;
+      }
+
+      .box {
+        font-family: 'PingFangSC-Regular';
+        padding-top: 0.2rem;
+      }
+
+      .box-content {
+        width: 94%;
+        margin: 0 3%;
+      }
+
+      .swiper-slide {
+        border-radius: 0.08rem;
+      }
+
+      .select-list {
+        margin-top: 0.28rem;
+        font-size: 0.32rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-around;
+        color: #fff;
+      }
+
+      .select-list .selected {
+        border-bottom: 4px solid #d01fe0;
+      }
+
+      .footer {
+        width: 100%;
+        height: 1rem;
+        background: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      .footer nav {
+        padding-top: 0.1rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-around;
+        line-height: 1;
+        text-align: center;
+      }
+
+      .footer nav p {
+        color: #989898;
+      }
+
+      .footer .icon {
+        width: 0.49rem;
+        height: 0.49rem;
+      }
+
+      .footer .select-btn p {
+        color: #2b3047;
+      }
+
+      .main {
+        border-top: 1px solid #695f6a;
+        padding-left: 0.7rem;
+        color: #fff;
+        padding-bottom: 0.55rem;
+      }
+
+      .week li {
+        margin: 0.6rem auto;
+      }
+
+      .week .top {
+        width: 0.52rem;
+      }
+
+      .week .photo {
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 50%;
+        margin: 0 0.1rem;
+      }
+
+      .week .user-msg {
+        display: inline-block;
+        font-size: 0.28rem;
+      }
+
+      .week .score {
+        font-size: 0.26rem;
+        color: #bfbfbf;
+      }
+      .week .user-num {
+        background: #000;
+        color: #fff;
+        width: 0.4rem;
+        height: 0.4rem;
+        display: inline-block;
+        text-align: center;
+        line-height: 0.4rem;
+        position: relative;
+        top: -0.2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <!-- 轮播 -->
+      <div class="box-content">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../assets/jtw/timg.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/jtw/timg.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/jtw/timg.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/jtw/timg.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- 排序 -->
+        <div class="select-list">
+          <div class="week-btn selected">周榜</div>
+          <div class="day-btn">日榜</div>
+          <div class="month-btn">月榜</div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="week">
+          <ul>
+            <li>
+              <img src="../assets/jtw/top1.png" alt="" class="top" />
+              <img src="../assets/jtw/head.png" alt="" class="photo" />
+              <div class="user-msg">
+                <p>陈捺川子</p>
+                <p class="score">魅力值:9990</p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/jtw/top2.png" alt="" class="top" />
+              <img src="../assets/jtw/head.png" alt="" class="photo" />
+              <div class="user-msg">
+                <p>一只新主播</p>
+                <p class="score">魅力值:8831</p>
+              </div>
+            </li>
+            <li>
+              <img src="../assets/jtw/top3.png" alt="" class="top" />
+              <img src="../assets/jtw/head.png" alt="" class="photo" />
+              <div class="user-msg">
+                <p>Mariusz Ciesla</p>
+                <p class="score">魅力值:7234</p>
+              </div>
+            </li>
+            <li>
+              <span class="user-num">4</span>
+              <img src="../assets/jtw/head.png" alt="" class="photo" />
+              <div class="user-msg">
+                <p>Mariusz Ciesla</p>
+                <p class="score">魅力值:7234</p>
+              </div>
+            </li>
+            <li>
+              <span class="user-num">5</span>
+              <img src="../assets/jtw/head.png" alt="" class="photo" />
+              <div class="user-msg">
+                <p>Mariusz Ciesla</p>
+                <p class="score">魅力值:7234</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--尾部 -->
+    <footer class="footer">
+      <nav>
+        <a href="index.html">
+          <img src="../assets/jtw/home.png" alt="" class="icon" />
+          <p>首页</p>
+        </a>
+        <a href="rank.html" class="select-btn">
+          <img src="../assets/jtw/bang-btn.png" alt="" class="icon" />
+          <p>榜单</p>
+        </a>
+        <a href="personal.html">
+          <img src="../assets/jtw/mine.png" alt="" class="icon" />
+          <p>我的</p>
+        </a>
+      </nav>
+    </footer>
+    <script src="../libs/js/jquery.min.js"></script>
+    <script src="../libs/swiper/swiper.min.js"></script>
+    <script>
+      $(function() {
+        var mySwiper = new Swiper('.swiper-container', {
+          autoplay: {
+            delay: 2500
+          },
+          pagination: {
+            el: '.swiper-pagination'
+          }
+        })
+        $('.select-list >div').click(function() {
+          $('.select-list >div').removeClass('selected')
+          $(this).addClass('selected')
+        })
+      })
+    </script>
+  </body>
+</html>

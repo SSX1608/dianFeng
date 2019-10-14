@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>绑定银行卡</title>
+    <link rel="stylesheet" href="../../libs/css/base.css" />
+    <link rel="stylesheet" href="../../libs/css/common.css" />
+    <script type="text/javascript" src="../../libs/js/rem.js"></script>
+    <style>
+      html {
+        background: #635069;
+        color: #fff;
+      }
+
+      .box {
+        font-family: 'PingFangSC-Regular';
+        padding-top: 0.2rem;
+        padding-left: 3%;
+        font-size: 0.32rem;
+      }
+
+      .box li {
+        padding: 0.2rem 0;
+        padding-right: 0.2rem;
+        line-height: 0.8rem;
+        overflow: hidden;
+        border-bottom: 1px solid #695f6a;
+      }
+
+      .fl {
+        float: left;
+      }
+
+      .fr {
+        float: right;
+      }
+
+      .box .text {
+        width: 1.5rem;
+        height: 0.45rem;
+        margin-right: 0.4rem;
+      }
+
+      .value {
+        color: #898989;
+        font-size: 0.28rem;
+      }
+
+      .save-btn {
+        display: block;
+        width: 5.5rem;
+        height: 1rem;
+        background: #b83af3;
+        background: linear-gradient(to right, #6950fb, #b83af3);
+        outline: none;
+        border: none;
+        color: #fff;
+        font-size: 0.3rem;
+        margin: 1.2rem auto 0;
+        border-radius: 0.08rem;
+      }
+
+      .input {
+        min-width: 4rem;
+        display: inline-block;
+        height: 0.6rem;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <ul>
+        <li>
+          <p class="fl text">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</p>
+          <input type="text" placeholder="请输入持卡人姓名" class="input" />
+        </li>
+        <li>
+          <p class="fl text">银行名称</p>
+          <input type="text" placeholder="请输入银行的名称" class="input" />
+        </li>
+        <li>
+          <p class="fl text">银行卡号</p>
+          <input type="text" placeholder="请输入您的银行卡号" class="input" />
+        </li>
+        <li>
+          <p class="fl text">所属网点</p>
+          <input
+            type="text"
+            placeholder="请输入您的银行所属网点"
+            class="input"
+          />
+        </li>
+        <li>
+          <p class="fl text">预留手机号</p>
+          <input
+            type="text"
+            placeholder="请输入您的银行预留手机号"
+            class="input"
+          />
+        </li>
+      </ul>
+      <button class="save-btn">确定</button>
+    </div>
+  </body>
+</html>

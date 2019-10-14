@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>我的认证</title>
+    <link rel="stylesheet" href="../libs/css/base.css" />
+    <script type="text/javascript" src="../libs/js/rem.js"></script>
+    <style>
+      html {
+        background: #635069;
+        color: #fff;
+      }
+
+      .box {
+        font-family: 'PingFangSC-Regular';
+        padding-top: 0.2rem;
+        padding-left: 3%;
+        font-size: 0.32rem;
+        padding-bottom: 0.2rem;
+      }
+
+      .box li {
+        padding: 0.2rem 0;
+        padding-right: 0.2rem;
+        line-height: 0.8rem;
+        overflow: hidden;
+        border-bottom: 1px solid #695f6a;
+      }
+
+      .fl {
+        float: left;
+      }
+
+      .fr {
+        float: right;
+      }
+
+      .box .text {
+        width: 1.5rem;
+        height: 0.5rem;
+        margin-right: 0.4rem;
+      }
+
+      .value {
+        color: #898989;
+        font-size: 0.28rem;
+      }
+
+      .save-btn {
+        display: block;
+        width: 5.5rem;
+        height: 1rem;
+        background: #b83af3;
+        background: linear-gradient(to right, #6950fb, #b83af3);
+        outline: none;
+        border: none;
+        color: #fff;
+        font-size: 0.3rem;
+        margin: 0.8rem auto 0;
+        border-radius: 0.08rem;
+      }
+
+      .input {
+        min-width: 4rem;
+        display: inline-block;
+        height: 0.6rem;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+      }
+
+      .select {
+        width: 5rem;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #898989;
+      }
+
+      .file {
+        min-height: 1.8rem;
+        position: relative;
+      }
+
+      .file-img {
+        width: 2rem;
+      }
+      .textarea {
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+      }
+      .file-input {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <ul>
+        <li>
+          <p class="fl text">邀请码</p>
+          <input
+            type="text"
+            placeholder="请输入邀请码（非必填项）"
+            class="input"
+          />
+        </li>
+        <li>
+          <p class="fl text">姓名</p>
+          <input type="text" placeholder="请输入您的姓名" class="input" />
+        </li>
+        <li>
+          <p class="fl text">所属平台</p>
+          <select name="请选择所属平台" id="" class="select">
+            <option value="请选择所属平台">请选择所属平台</option>
+            <option value="请选择所属平台">斗鱼</option>
+            <option value="请选择所属平台">虎牙</option>
+          </select>
+        </li>
+        <li>
+          <p>上传形象照片</p>
+          <div class="file">
+            <img src="../assets/jtw/file-img.png" alt="" class="file-img" />
+            <input type="file" class="file-input" />
+            <span class="value">（最多可上传五张）</span>
+          </div>
+        </li>
+        <li>
+          <p>文字介绍</p>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="4"
+            placeholder="请输入您想说的话…"
+            class="textarea"
+          ></textarea>
+        </li>
+      </ul>
+      <button class="save-btn">保存</button>
+    </div>
+    <script src="../libs/js/jquery.min.js"></script>
+    <script>
+      $(function() {
+        $('.save-btn').click(function() {
+          alert('保存成功!')
+        })
+        $('.file-input').change(function() {
+          var imgFile = this.files[0]
+          var fr = new FileReader()
+          fr.onload = function() {
+            $('.file-img')[0].src = fr.result
+          }
+          fr.readAsDataURL(imgFile)
+        })
+      })
+    </script>
+  </body>
+</html>
